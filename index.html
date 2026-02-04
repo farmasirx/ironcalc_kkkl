@@ -18,451 +18,359 @@
 
       body {
         font-family: 'Roboto', sans-serif;
-        font-size: 19px; 
+        font-size: 18px; 
         color: var(--text-color);
         background-color: #f5f5f5;
         margin: 0;
-        padding: 10px; /* Reduced body padding */
-        line-height: 1.4; /* Tightened line height */
-      }
-
-      /* Superscript style */
-      .formula-box sup {
-        font-size: 0.6em; 
-        font-weight: 400; 
-        vertical-align: super;
+        padding: 10px;
+        line-height: 1.3;
       }
 
       .container {
         position: relative; 
-        max-width: 1000px; 
+        max-width: 950px; 
         margin: 0 auto;
         background: white;
-        padding: 25px; /* Reduced container padding from 40px to 25px */
+        padding: 20px;
         border-radius: 12px;
         box-shadow: 0 4px 20px rgba(194, 24, 91, 0.08); 
         border-top: 6px solid var(--primary-color);
       }
 
-      /* --- LOGO CSS --- */
       .top-right-logo-link {
         position: absolute;
-        top: 5px;  
+        top: 10px;  
         right: 20px; 
-        display: block; 
-        width: 150px; 
-        text-decoration: none;
-        transition: opacity 0.2s; 
+        width: 110px; 
         z-index: 10; 
       }
 
-      .top-right-logo-link:hover {
-        opacity: 0.8; 
-        cursor: pointer;
-      }
+      .top-right-logo-link img { width: 100%; height: auto; }
 
-      .top-right-logo-link img {
-        width: 100%; 
-        height: auto;
-        display: block;
-      }
-
-      /* Header Section */
-      header {
-        text-align: center;
-        margin-bottom: 20px; /* Drastically reduced from 40px */
-        padding-top: 5px; 
-      }
+      header { text-align: center; margin-bottom: 15px; }
 
       h1 {
         color: var(--primary-color);
-        font-size: 38px; 
+        font-size: 34px; 
         font-weight: 900;
-        margin: 0 0 5px 0;
+        margin: 0;
         text-transform: uppercase; 
       }
 
+      .brand-mark {
+        font-size: 8px; 
+        font-weight: 700;
+        color: #4a148c;
+        vertical-align: super;
+        position: relative;
+        top: -8px;
+      }
+
       .subtitle {
-        font-size: 16px; 
+        font-size: 14px; 
         color: #888;
         text-transform: uppercase;
         letter-spacing: 1.5px;
         font-weight: 500;
+        margin-bottom: 10px;
       }
 
-      /* Formula Banner */
       .formula-box {
         background-color: #fff3e0; 
         color: #5d4037; 
-        padding: 10px; /* Reduced padding */
+        padding: 8px;
         border-radius: 6px;
-        font-family: 'Roboto', sans-serif;
-        font-size: 20px; 
+        font-size: 18px; 
         font-weight: 500;
         text-align: center;
-        margin-top: 15px; /* Reduced margin */
         border: 1px solid #ffe0b2; 
       }
+.split-suggestion {
+  display: block;
+  font-size: 11px;
+  color: #666;
+  font-style: italic;
+  margin-top: 4px;
+  line-height: 1.1;
+  font-weight: 400;
+}
 
-      /* Main Layout */
-      .main-content {
-        display: flex;
-        gap: 30px; 
-        align-items: stretch; 
-        margin-bottom: 20px; /* Reduced margin */
-      }
+.day-range {
+  display: block;
+  font-size: 10px;
+  color: #999;
+  margin-bottom: 2px;
+  font-weight: 500;
+}
+/* Specifically targeting the superscript in the formula box */
+.formula-box sup {
+  font-size: 0.65em;       /* Reduces the size significantly */
+  vertical-align: 0.4em;    /* Lowers the "protrusion" so it doesn't stick up too high */
+  font-weight: 700;        /* Maintains legibility at smaller sizes */
+  margin-left: 1px;        /* Prevents it from touching the 'a' in Formula */
+}
 
-      .left-col {
-        flex: 1;
-      }
+      .main-content { display: flex; gap: 20px; margin-top: 20px; margin-bottom: 15px; align-items: stretch; }
+      .left-col, .right-col { flex: 1; }
 
-      .right-col {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-      }
-
-      /* Form Styling */
-      .form-group {
-        margin-bottom: 12px; /* Reduced from 25px to 12px (Compact inputs) */
-      }
-
-      .form-group:last-child {
-        margin-bottom: 0;
-      }
-
-      label {
-        display: block;
-        font-weight: 700; 
-        margin-bottom: 4px;
-        color: #333;
-        font-size: 19px; 
-      }
-
-      .remark {
-        font-size: 16px; 
-        color: var(--maroon-text);
-        margin-top: 2px;
-        font-weight: 500;
-        font-style: italic; 
-      }
+      .form-group { margin-bottom: 12px; }
+      label { display: block; font-weight: 700; margin-bottom: 2px; font-size: 17px; color: #333; }
+      .remark { font-size: 16px; color: var(--maroon-text); font-weight: 500; font-style: italic; }
 
       input[type="number"] {
         width: 100%;
-        padding: 10px; /* Reduced padding slightly */
-        font-size: 21px; 
+        padding: 10px;
+        font-size: 20px; 
         border: 1px solid var(--border-color);
         border-radius: 4px;
         box-sizing: border-box;
-        transition: all 0.2s;
       }
       
-      #weight, #currentHb {
-        color: #0d47a1; 
-        font-weight: 700; 
-      }
+      #weight, #currentHb { color: #0d47a1; font-weight: 700; }
 
-      input[type="number"]:focus {
-        outline: none;
-        border-color: var(--primary-color);
-        background-color: var(--secondary-color);
-      }
-
-      /* Result Box styling */
       .result-section {
         background-color: var(--result-bg);
         border: 2px solid var(--primary-light);
-        padding: 15px; /* Reduced padding */
-        border-radius: 8px;
+        padding: 20px;
+        border-radius: 12px;
         text-align: center;
-        flex-grow: 1; 
+        height: 100%;
         display: flex;
         flex-direction: column;
-        justify-content: center; 
+        justify-content: center; /* Balanced for matching height */
+        box-sizing: border-box;
       }
 
-      .result-label {
-        font-size: 18px; 
-        font-weight: bold;
-        color: #666;
+      .result-label { font-size: 15px; font-weight: 900; color: #555; text-transform: uppercase; letter-spacing: 0.5px; }
+      .result-value-small { font-size: 28px; font-weight: 700; color: var(--maroon-text); margin: 2px 0; }
+      .result-value-large { font-size: 64px; font-weight: 900; color: var(--primary-color); line-height: 1; margin: 8px 0; }
+
+      .divider { height: 1px; background-color: #f8bbd0; margin: 15px 40px; }
+
+      .weekly-schedule-title { 
+        font-size: 17px; 
+        font-weight: 900; 
+        color: var(--header-blue); 
+        text-transform: uppercase; 
+        margin-top: 35px; /* Margin before schedule */
+        letter-spacing: 1px;
+      }
+      
+      .weekly-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 12px; }
+      .week-pill { background: white; border: 1.5px solid var(--primary-light); border-radius: 10px; padding: 12px 5px; box-shadow: 0 3px 6px rgba(0,0,0,0.04); }
+      .week-label { font-size: 12px; color: #777; font-weight: 700; display: block; text-transform: uppercase; margin-bottom: 4px; }
+      .week-val { font-size: 22px; font-weight: 900; color: var(--primary-color); }
+
+      .reset-btn {
+        margin-top: 15px;
+        padding: 12px;
+        background-color: #f5f5f5;
+        color: #757575;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        cursor: pointer;
+        font-weight: 700;
+        font-size: 13px;
         text-transform: uppercase;
-        letter-spacing: 0.5px;
+        width: 100%;
+        transition: 0.2s;
       }
 
-      .result-value-small {
-        font-size: 36px; 
-        font-weight: 700;
-        color: var(--maroon-text);
-        margin: 5px 0 10px 0; /* Reduced margins */
-      }
-
-      .result-value-large {
-        font-size: 70px; 
-        font-weight: 700;
-        color: var(--primary-color);
-        margin: 5px 0;
-        line-height: 1;
-      }
-
-      .divider {
-        height: 1px;
-        background-color: #f8bbd0;
-        margin: 15px 30px; /* Reduced margin */
-      }
-
-      /* Protocol Info Section */
       .protocol-section {
         background-color: #fff;
         border: 2px solid var(--primary-light); 
         border-left: 6px solid var(--primary-color); 
-        padding: 20px; /* Reduced padding from 35px */
+        padding: 20px;
         border-radius: 4px;
-        margin-bottom: 20px;
-        font-size: 19px; 
-      }
-
-      .info-title {
-        font-size: 21px; 
-        font-weight: 700;
-        color: var(--header-blue); 
         margin-bottom: 15px;
-        text-transform: uppercase;
-        border-bottom: 2px solid #cfd8dc; 
-        padding-bottom: 8px;
       }
 
-      .info-row {
-        display: flex;
-        margin-bottom: 10px; /* Reduced spacing */
-        color: #424242;
-      }
-      
-      .info-label {
-        font-weight: 700;
-        min-width: 250px; 
-        color: var(--maroon-text);
-      }
-
-      .info-content {
-        flex: 1;
-      }
-
-      /* Footer Styling */
-      .footer {
-        margin-top: 20px;
-        color: #666;
-      }
-
-      .disclaimer-box {
-        text-align: center;
-        font-style: italic;
-        background-color: #fafafa;
-        padding: 15px; /* Compact box */
-        border-radius: 8px;
-        border: 1px solid #eee;
-        margin-bottom: 15px;
-        font-size: 16px; 
-        line-height: 1.4;
-      }
-      
-      .disclaimer-title {
+      .info-title { 
+        font-size: 18px; 
+        font-weight: 700; 
         color: var(--header-blue); 
-        font-weight: 700;
-        font-size: 17px;
-        display: block;
-        margin-bottom: 2px;
-        font-style: normal;
+        margin-bottom: 15px; 
+        text-transform: uppercase; 
+        border-bottom: 1px solid #cfd8dc; 
+        padding-bottom: 8px; 
       }
-
-      .references-box {
-        font-size: 15px; 
-        border-top: 1px solid #e0e0e0;
-        padding-top: 10px;
-        color: #757575;
-      }
-
-      .ref-title {
-        font-weight: 700;
-        margin-bottom: 5px;
-        text-transform: uppercase;
-        font-size: 17px; 
-        color: var(--header-blue);
-      }
-
-      .ref-list {
-        margin: 0;
-        padding-left: 20px;
-      }
-      
-      .ref-list li {
-        margin-bottom: 2px; 
-        line-height: 1.3;
-      }
-
-      @media (max-width: 700px) {
-        .main-content {
-          flex-direction: column;
-        }
-        /* Add this inside the @media (max-width: 700px) section */
-      .formula-box {
-        font-size: 15px;      /* Reduces font from 23px to 15px */
-        line-height: 1.6;     /* Adds space between the wrapped lines */
-        padding: 15px 10px;   /* Adds a bit more vertical breathing room */
-        text-align: center;   /* Keeps it centered */
-      }
-
-      .formula-box sup {
-        font-size: 0.7em;     /* Adjusts the small number '1' size */
-      }
-        .protocol-section .info-row {
-          flex-direction: column;
-          margin-bottom: 15px;
-        }
-        .info-label {
-          margin-bottom: 2px;
-          min-width: auto;
-        }
-        .top-right-logo-link {
-            width: 100px;
-            top: 15px;
-            right: 15px;
-        }
-        header {
-            padding-right: 110px; 
-            text-align: left;
-        }
-        h1 {
-            font-size: 26px; 
-        }
-        .container {
-            padding: 15px;
-        }
-      }
-.brand-mark {
-    font-size: 7px;        /* Matches standard TM size */
-    font-weight: 600;       /* Bold enough to be seen at small size */
-    color: #4a148c;         /* Professional Dark Purple */
- /* 1. Set the base behavior to superscript */
-    vertical-align: super;  
-    
-    /* 2. Use relative positioning to "nudge" it higher manually */
-    position: relative;
-    top: -6px;
-    letter-spacing: 0.5px;
-    font-family: sans-serif; /* Ensures clean letters at small size */
+.preserve-case { 
+  text-transform: none !important; 
+  display: inline-block; /* Helps some browsers respect the casing better */
 }
 
+      .admin-table { width: 100%; border-collapse: collapse; margin-top: 5px; font-size: 16px; }
+    .admin-table th, .admin-table td { 
+  border: 1.5px solid var(--primary-light); /* Change from #eee to light pink */
+  padding: 10px 8px; 
+  text-align: center; 
+}
+      .admin-table th { background-color: #fafafa; color: var(--maroon-text); font-weight: 700; text-transform: none; font-size: 13px; }
+
+      .protocol-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 20px; }
+      .protocol-left { border-right: 1px solid #f0f0f0; padding-right: 15px; }
+
+      .info-row-compact { margin-bottom: 22px; font-size: 17px; color: #333; line-height: 1.4; }
+      .info-label-compact { font-weight: 700; color: var(--maroon-text); display: block; margin-bottom: 4px; text-transform: none; font-size: 16px; }
+
+      /* FOOTER LAYOUT: References next to Disclaimer */
+      .footer-container { 
+        border-top: 1px solid #e0e0e0; 
+        padding-top: 15px; 
+        margin-top: 20px; 
+        display: flex; 
+        gap: 30px; 
+        align-items: flex-start;
+      }
+      .references-box { flex: 2; font-size: 8.5px; color: #999; }
+      .ref-title { font-weight: 700; margin-bottom: 5px; text-transform: uppercase; color: var(--header-blue); font-size: 10px; }
+      .ref-list { margin: 0; padding-left: 15px; line-height: 1.1; }
+
+      .disclaimer-side-box { 
+        flex: 1; 
+        font-size: 10px; 
+        color: #777; 
+        line-height: 1.3; 
+        text-align: right; 
+        border-left: 1px solid #eee; 
+        padding-left: 20px;
+      }
+      .disclaimer-title { font-weight: 900; color: var(--header-blue); display: block; margin-bottom: 3px; }
+
+      @media (max-width: 750px) { 
+        .main-content, .protocol-grid, .footer-container { flex-direction: column; } 
+        .protocol-left, .disclaimer-side-box { border: none; padding: 0; }
+        .disclaimer-side-box { text-align: left; margin-top: 15px; }
+      }
     </style>
   </head>
   <body>
 
     <div class="container">
-      
       <a href="https://sites.google.com/moh.gov.my/irx/home" target="_blank" class="top-right-logo-link">
-          <img src="logo.png" alt="Organization Logo">
+          <img src="logo.png" alt="Logo">
       </a>
 
       <header>
         <h1>Iron Dose Calculator<span class="brand-mark">WY</span></h1>
         <div class="subtitle">Iron Deficiency Anaemia &bull; Pregnancy</div>
-        
         <div class="formula-box">
           Ganzoni's Formula<sup>1</sup>: (Weight &times; (Target Hb - Actual Hb) &times; 2.4) + Iron Stores
         </div>
       </header>
 
       <div class="main-content">
-        
         <div class="left-col">
           <div class="form-group">
             <label for="weight">Body Weight (kg)</label>
-            <input type="number" id="weight" placeholder="e.g. 50">
+            <input type="number" id="weight" placeholder="e.g. 54">
             <div class="remark">Use pre-pregnancy weight for pregnant women²</div>
           </div>
-
           <div class="form-group">
             <label for="currentHb">Current / Initial Hb (g/dL)</label>
-            <input type="number" id="currentHb" placeholder="e.g. 9" step="0.1">
+            <input type="number" id="currentHb" placeholder="e.g. 10" step="0.1">
           </div>
-
           <div class="form-group">
             <label for="targetHb">Target Hb (g/dL)</label>
             <input type="number" id="targetHb" value="12" step="0.1">
             <div class="remark">Standard: 12g/dL for pregnant lady³</div>
           </div>
-
           <div class="form-group">
             <label for="stores">Iron Stores (mg)</label>
             <input type="number" id="stores" value="500">
             <div class="remark">> 40kg body weight = 500mg³</div>
           </div>
+          <button class="reset-btn" onclick="resetForm()">Reset All Fields</button>
         </div>
 
         <div class="right-col">
           <div class="result-section">
-            
             <div class="result-label">Exact Iron Dose Calculated</div>
             <div class="result-value-small" id="exactDose">0 mg</div>
-            
             <div class="divider"></div>
-
-            <div class="result-label" style="color:#C2185B; font-size: 26px; line-height: 1.2;">TOTAL IRON DOSE NEEDED</div>
-            <div style="font-size:16px; color:#888; margin-bottom:5px;">(Round up/down to the nearest 100mg)</div>
+            <div class="result-label" style="color:#C2185B;">TOTAL IRON DOSE NEEDED</div>
             <div class="result-value-large" id="roundedDose">0 mg</div>
-            <div style="font-size:18px; font-weight:500; color:#555; margin-top:5px;">in divided doses</div>
-            
+            <div style="font-size:14px; color:#888; font-weight:500;">(Rounded to nearest 100mg)</div>
+
+            <div class="weekly-schedule-title">Recommended Weekly Schedule</div>
+            <div class="weekly-grid">
+  <div class="week-pill">
+    <span class="day-range">Day 1-7</span>
+    <span class="week-label">Week 1</span>
+    <span class="week-val" id="w1">-</span>
+  </div>
+  <div class="week-pill">
+    <span class="day-range">Day 8-14</span>
+    <span class="week-label">Week 2</span>
+    <span class="week-val" id="w2">-</span>
+  </div>
+  <div class="week-pill">
+    <span class="day-range">Day 15 onwards</span>
+    <span class="week-label">Week 3</span>
+    <span class="week-val" id="w3">-</span>
+  </div>
+</div>
+            <div id="doseWarning" style="font-size: 12px; color: #880e4f; margin-top: 10px; font-style: italic;"></div>
           </div>
         </div>
       </div>
 
       <div class="protocol-section">
-        <div class="info-title">Dosing & Administration Protocols for Iron Sucrose Injection 100mg/5mL</div>
-        
-        <div class="info-row">
-          <div class="info-label">Maximum dose per week³:</div>
-          <div class="info-content">
-            &lt; 70kg: 7mg/kg/week<br>
+        <div class="info-title">DOSING & ADMINISTRATION PROTOCOLS FOR IRON SUCROSE INJECTION (<span class="preserve-case">100mg/5mL</span>)</div>
+        <div class="protocol-grid">
+          <div class="protocol-left">
+            <div class="info-row-compact">
+              <span class="info-label-compact">Maximum Dose Per Week³:</span>
+               &lt; 70kg: 7mg/kg/week<br>
             &gt; 70kg: 500mg/week
+            </div>
+            <div class="info-row-compact">
+              <span class="info-label-compact">Max Single Tolerated Dose⁴:</span>
+              7mg/kg once a week (max 500mg), must be given over min 3.5 hours.
+            </div>
+            <div class="info-row-compact">
+              <span class="info-label-compact">Test Dose²:</span>
+              20mg in 20mL normal saline (NS) over 15 mins (prior 1st dose only).
+            </div>
           </div>
-        </div>
-
-        <div class="info-row">
-          <div class="info-label">Max single tolerated dose:</div>
-          <div class="info-content">
-            7mg/kg once a week (max 500mg), must be given over min 3.5 hours⁴.
-          </div>
-        </div>
-
-        <div class="info-row">
-          <div class="info-label">Test dose²:</div>
-          <div class="info-content">
-            20mg iron sucrose in 20mL NS over 15 mins infusion, then observe for 1 hour (prior first dose only)
+          
+          <div class="protocol-right">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>IRON SUCROSE DOSE (mg) /VOLUME (mL)</th>
+                  <th>DILUTION & MIN INFUSION TIME²</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>100mg (5mL)</td><td>100mL NS over <b>15 mins</b></td></tr>
+                <tr><td>200mg (10mL)</td><td>200mL NS over <b>30 mins</b></td></tr>
+                <tr><td>300mg (15mL)</td><td>300mL NS over <b>1.5 hours</b></td></tr>
+                <tr><td>400mg (20mL)</td><td>400mL NS over <b>2.5 hours</b></td></tr>
+                <tr><td>500mg (25mL)</td><td>500mL NS over <b>3.5 hours</b></td></tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
 
-      <div class="footer">
-        <div class="disclaimer-box">
-          <span class="disclaimer-title">DISCLAIMER:</span>
-          This guide is intended to support healthcare professionals in calculating iron dose.<br>
-          It should be used in conjunction with clinical judgment and interpreted in the context of professional expertise.<br>
-          Always refer to the specific product literature for detailed prescribing information and to ensure appropriate and safe administration.
-<div class="copyright-text">
-            &copy; All Rights Reserved.
-          </div>
-        </div>
-        
+      <div class="footer-container">
         <div class="references-box">
           <div class="ref-title">References</div>
           <ol class="ref-list">
-            <li>Ganzoni AM. Intravenous iron-dextran: therapeutic and experimental possibilities. Schweiz Med Wochenschr. 1970; 100(70):301-303.</li>
+             <li>Ganzoni AM. Intravenous iron-dextran: therapeutic and experimental possibilities. Schweiz Med Wochenschr. 1970; 100(70):301-303.</li>
             <li>Transfusion Practitioner. Protocol for the use of IV iron sucrose (Venofer ®). NHS Hinchingbrooke Health Care; 2008.</li>
             <li>Protocol for Intravenous Venofer (Iron Sucrose) among pregnant women with Iron Deficiency Anaemia in Klinik Kesihatan JKWPKL&P 2022.</li>
             <li>AINIRON Iron Sucrose Injection 20mg/mL [package insert]. Malaysia: AIN MEDICARE SDN BHD; 01 July 2019.</li>
           </ol>
         </div>
-      </div>
 
+        <div class="disclaimer-side-box">
+          <span class="disclaimer-title">DISCLAIMER:</span>
+          This guide supports healthcare professionals in iron dose calculation and should be used with clinical judgment.
+          <div style="font-weight: 700; margin-top: 5px;">&copy; All Rights Reserved.</div>
+        </div>
+      </div>
     </div>
 
     <script>
@@ -473,37 +381,77 @@
       
       const exactDoseDisplay = document.getElementById('exactDose');
       const roundedDoseDisplay = document.getElementById('roundedDose');
+      const w1Display = document.getElementById('w1');
+      const w2Display = document.getElementById('w2');
+      const w3Display = document.getElementById('w3');
+      const warningDisplay = document.getElementById('doseWarning');
 
-      const inputs = [weightInput, currentHbInput, targetHbInput, storesInput];
-      inputs.forEach(input => {
+      [weightInput, currentHbInput, targetHbInput, storesInput].forEach(input => {
         input.addEventListener('input', calculate);
       });
 
-      function calculate() {
-        const weight = parseFloat(weightInput.value) || 0;
-        const currentHb = parseFloat(currentHbInput.value) || 0;
-        const targetHb = parseFloat(targetHbInput.value) || 0;
-        const stores = parseFloat(storesInput.value) || 0;
-
-        if (weight > 0 && currentHb > 0) {
-          const hbDeficit = targetHb - currentHb;
-          
-          if (hbDeficit < 0) {
-              exactDoseDisplay.textContent = "Hb > Target";
-              roundedDoseDisplay.textContent = "0 mg";
-              return;
-          }
-
-          const exactDose = (weight * hbDeficit * 2.4) + stores;
-          const roundedDose = Math.round(exactDose / 100) * 100;
-
-          exactDoseDisplay.textContent = exactDose.toFixed(1) + " mg";
-          roundedDoseDisplay.textContent = roundedDose + " mg";
-        } else {
-          exactDoseDisplay.textContent = "0 mg";
-          roundedDoseDisplay.textContent = "0 mg";
-        }
+      function resetForm() {
+        weightInput.value = '';
+        currentHbInput.value = '';
+        targetHbInput.value = '12';
+        storesInput.value = '500';
+        calculate();
       }
+
+      function calculate() {
+  const weight = parseFloat(weightInput.value) || 0;
+  const currentHb = parseFloat(currentHbInput.value) || 0;
+  const targetHb = parseFloat(targetHbInput.value) || 0;
+  const stores = parseFloat(storesInput.value) || 0;
+
+  if (weight > 0 && currentHb > 0) {
+    const hbDeficit = targetHb - currentHb;
+    if (hbDeficit <= 0) { updateUI("Hb ≥ Target", "0 mg", ["-", "-", "-"], ""); return; }
+
+    const exactDose = (weight * hbDeficit * 2.4) + stores;
+    const roundedDose = Math.round(exactDose / 100) * 100;
+
+    // Logic for max weekly dose based on weight
+    let rawLimit = (weight >= 70) ? 500 : (weight * 7);
+    const safeWeeklyMax = Math.floor(rawLimit / 100) * 100 || 100;
+
+    let remaining = roundedDose;
+    let weeklyDisplay = ["-", "-", "-"];
+    
+    for (let i = 0; i < 3; i++) {
+      if (remaining <= 0) break;
+      let dose = Math.min(remaining, safeWeeklyMax);
+      
+      // Smart Split Suggestion for 500mg
+      if (dose === 500) {
+        weeklyDisplay[i] = `500mg<span class="split-suggestion">(or 300mg + 200mg)</span>`;
+      } else {
+        weeklyDisplay[i] = dose + "mg";
+      }
+      
+      remaining -= dose;
+    }
+
+    updateUI(
+      exactDose.toFixed(1) + " mg", 
+      roundedDose + " mg", 
+      weeklyDisplay,
+      remaining > 0 ? `* Further ${remaining}mg needed after W3.` : ""
+    );
+  } else {
+    updateUI("0 mg", "0 mg", ["-", "-", "-"], "");
+  }
+}
+
+// Update the updateUI function to handle HTML (for the span)
+function updateUI(exact, rounded, weeks, warning) {
+  exactDoseDisplay.textContent = exact;
+  roundedDoseDisplay.textContent = rounded;
+  w1Display.innerHTML = weeks[0]; // Changed to innerHTML to allow the split text
+  w2Display.innerHTML = weeks[1];
+  w3Display.innerHTML = weeks[2];
+  warningDisplay.textContent = warning;
+}
     </script>
   </body>
 </html>
